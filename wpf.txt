@@ -1,0 +1,25 @@
+22.03.2019
+
+Binding
+Test Binding
+Validation
+Command
+
+10.04.2019
+
+Converters
+Localization
+Mock of Message Box
+Cancel Button
+Close Dialog
+
+Next Time
+- Panels (Dock, Stack, Grid, Wrap)
+- Menu and Context Menu
+- User Control
+- Custom Controls
+- Styles
+- SVG
+- XamDataGrid & Grid
+- Events
+- Toolbar
