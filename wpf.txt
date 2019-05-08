@@ -6,20 +6,21 @@ Validation
 Command
 
 10.04.2019
-
 Converters
 Localization
 Mock of Message Box
 Cancel Button
 Close Dialog
 
-Next Time
+08.05.2019
 - Panels (Dock, Stack, Grid, Wrap)
+- SVG
+- Events
+
+Next Time
 - User Control
 - Custom Controls
 - Styles
-- SVG
-- Events
 - XamDataGrid & Grid
 - Menu and Context Menu
 - Toolbar
