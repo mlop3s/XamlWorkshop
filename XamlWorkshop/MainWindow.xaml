@@ -22,13 +22,25 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <DockPanel>
-        <StackPanel x:Name="LayoutRoot"
-                    Orientation="Horizontal"
+    <DockPanel LastChildFill="True">
+        <Grid x:Name="LayoutRoot"
                     DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
 
-            <TextBox Text="{x:Static properties:Resources.Age}"
-                     Margin="6">
+            <TextBlock Text="{x:Static properties:Resources.Age}"
+                     Grid.Column="0"
+                     Margin="6" />
+
+            <TextBox
+                       Text="{Binding Age, Delay=100, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       DockPanel.Dock="Right"
+                       ToolTip="{x:Static properties:Resources.InputSomethingPlease}"
+                Grid.Column="1"
+                Margin="6">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
                         <Style.Triggers>
@@ -39,23 +51,19 @@
                             </Trigger>
                         </Style.Triggers>
                     </Style>
-                </TextBox.Style>
+                </TextBox.Style>                
             </TextBox>
-
-            <TextBox
-                       MinWidth="100"
-                       Text="{Binding Age, Delay=100, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                       DockPanel.Dock="Right"
-                       ToolTip="{x:Static properties:Resources.InputSomethingPlease}"
-                Margin="6"/>
 
             <TextBox Text="You cant watch this"
                      Margin="6"
+                     Grid.Column="2"
                      Visibility="{Binding HasAge, Converter={StaticResource VisibilityConverter}}"/>
 
-        </StackPanel>
-        <StackPanel DockPanel.Dock="Bottom"
-                    HorizontalAlignment="Right">
+        </Grid>
+        <UniformGrid 
+                    HorizontalAlignment="Right"
+                     DockPanel.Dock="Bottom"
+                     Columns="2">
             <Button Content="Ok"
                     Padding="6"
                     Margin="6"
@@ -67,6 +75,9 @@
                     MinWidth="100"
                     Command="{Binding CancelCommand}"
                     IsCancel="True"/>            
-        </StackPanel>
+        </UniformGrid>
+        <TextBox TextWrapping="Wrap"
+                 HorizontalAlignment="Stretch"
+                 HorizontalContentAlignment="Stretch"/>
     </DockPanel>
 </Window>
