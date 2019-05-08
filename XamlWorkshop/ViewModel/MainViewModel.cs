@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Windows;
+using System.Windows.Input;
 
 namespace XamlWorkshop.ViewModel
 {
@@ -12,7 +13,7 @@ namespace XamlWorkshop.ViewModel
     /// See http://www.mvvmlight.net
     /// </para>
     /// </summary>
-    public class MainViewModel : MediCommonControls.ViewModel.NotifyErrorViewModelBase
+    public class MainViewModel : MediCommonControls.ViewModel.NotifyErrorViewModelBase, IObserved
     {
         private int _age;
         private RelayCommand _command;
@@ -23,6 +24,21 @@ namespace XamlWorkshop.ViewModel
             _view.SetTarget(view);
             OkCommand = new RelayCommand(OnOkCommand, CanOk);
             CancelCommand = new RelayCommand(OnCancelCommand);
+            Curious = new CuriousClass(Service, this);
+        }
+
+        /// <summary>
+        /// Fires if age > 50
+        /// </summary>
+        public event EventHandler<AncientEventArgs> AncientOne;
+
+        private void FireAncientOneEvent(int value)
+        {
+            AncientOne?.Invoke(this, new AncientEventArgs
+            {
+                Age = value,
+                Name = "Fritzle"
+            });
         }
 
         [Range(1, 100, ErrorMessage = "Attribute")]
@@ -39,6 +55,10 @@ namespace XamlWorkshop.ViewModel
                 {
                     OkCommand.RaiseCanExecuteChanged();
                     RaisePropertyChanged(nameof(HasAge));
+                    if (value > 50)
+                    {
+                        FireAncientOneEvent(value);
+                    }
                 }
             }
         }
@@ -99,6 +119,8 @@ namespace XamlWorkshop.ViewModel
             get { return _service ?? (_service = new MessageBoxService()); }
             set { _service = value; }
         }
+
+        public CuriousClass Curious { get; set; }
 
 
         private void OnCancelCommand()

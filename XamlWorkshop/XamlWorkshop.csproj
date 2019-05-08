@@ -85,7 +85,10 @@
     <Compile Include="Model\DataItem.cs" />
     <Compile Include="Model\DataService.cs" />
     <Compile Include="Model\IDataService.cs" />
+    <Compile Include="ViewModel\AncientEvent.cs" />
+    <Compile Include="ViewModel\CuriousClass.cs" />
     <Compile Include="ViewModel\IMainView.cs" />
+    <Compile Include="ViewModel\IObserved.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
