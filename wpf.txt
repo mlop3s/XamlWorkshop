@@ -15,11 +15,11 @@ Close Dialog
 
 Next Time
 - Panels (Dock, Stack, Grid, Wrap)
-- Menu and Context Menu
 - User Control
 - Custom Controls
 - Styles
 - SVG
-- XamDataGrid & Grid
 - Events
+- XamDataGrid & Grid
+- Menu and Context Menu
 - Toolbar
