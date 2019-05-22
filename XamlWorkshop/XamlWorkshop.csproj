@@ -141,6 +141,12 @@
       <Link>Meta\wpf.txt</Link>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XamlWorkshopCustomControls\XamlWorkshopCustomControls.csproj">
+      <Project>{8a1689e5-3958-403f-8e80-5805c0dacd60}</Project>
+      <Name>XamlWorkshopCustomControls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
