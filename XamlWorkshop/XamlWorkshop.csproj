@@ -46,6 +46,54 @@
     <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="InfragisticsWPF4.Calculations.XamCalculationManager.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Calculations.XamCalculationManager.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Editors.XamColorPicker.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Controls.Editors.XamColorPicker.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Editors.XamComboEditor.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Controls.Editors.XamComboEditor.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Editors.XamSlider.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Controls.Editors.XamSlider.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Menus.XamDataTree.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Controls.Menus.XamDataTree.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DataManager.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.DataManager.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DataPresenter.CalculationAdapter.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.DataPresenter.CalculationAdapter.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DataPresenter.ExcelExporter.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.DataPresenter.ExcelExporter.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DataPresenter.v17.2, Version=17.2.20172.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.DataPresenter.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.Core.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Documents.Core.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.Excel.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Documents.Excel.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DragDrop.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.DragDrop.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Editors.v17.2, Version=17.2.20172.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Editors.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Reporting.v17.2">
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.Reporting.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.v17.2, Version=17.2.20172.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DEV\DEVMAIN\Nexus\MF\libs\Framework-1.0.0\desktop\InfragisticsWPF4.v17.2.dll</HintPath>
+    </Reference>
     <Reference Include="MediCommonControls">
       <HintPath>..\..\..\DEV\DEVMAIN\Debug\MediCommonControls.dll</HintPath>
     </Reference>
@@ -90,6 +138,7 @@
     <Compile Include="ViewModel\IMainView.cs" />
     <Compile Include="ViewModel\IObserved.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Person.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

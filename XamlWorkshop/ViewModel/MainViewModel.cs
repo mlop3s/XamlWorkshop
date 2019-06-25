@@ -1,9 +1,11 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace XamlWorkshop.ViewModel
 {
@@ -19,12 +21,43 @@ namespace XamlWorkshop.ViewModel
         private RelayCommand _command;
         private WeakReference<IMainView> _view = new WeakReference<IMainView>(null);
         private string _welcomeTitle = "Hello";
+
+        public ObservableCollection<Person> People
+        {
+            get;
+        } = new ObservableCollection<Person>();
+
+
         public MainViewModel(IMainView view)
         {
             _view.SetTarget(view);
             OkCommand = new RelayCommand(OnOkCommand, CanOk);
             CancelCommand = new RelayCommand(OnCancelCommand);
             Curious = new CuriousClass(Service, this);
+            _goCommand = new RelayCommand(DoGo);
+
+            People.Add(new Person
+            {
+                Name = "John Doe",
+                Age = 43,
+                Job = "Getting cans",
+                Color = Colors.Purple,
+                Birth = new DateTime(1976, 12, 12)
+            });
+
+            People.Add(new Person
+            {
+                Name = "Jane Doe",
+                Age = 33,
+                Job = "Helping people",
+                Color = Colors.Red,
+                Birth = new DateTime(1986, 11, 11)
+            });
+        }
+
+        private void DoGo()
+        {
+            MessageBox.Show("Go called");
         }
 
         /// <summary>
@@ -40,6 +73,22 @@ namespace XamlWorkshop.ViewModel
                 Name = "Fritzle"
             });
         }
+
+        private RelayCommand _goCommand;
+
+        public RelayCommand Go
+        {
+            get
+            {
+                return _goCommand;
+            }
+
+            set
+            {
+                Set(ref _goCommand, value);
+            }
+        }
+
 
         [Range(1, 100, ErrorMessage = "Attribute")]
         public int Age
